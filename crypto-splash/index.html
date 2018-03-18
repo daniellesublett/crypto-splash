@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en" class="demo-loading no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>CRYPTO DEMO</title>
+		<meta name="description" content=" " />
+		<meta name="keywords" content=" " />
+<!-- 		<link rel="shortcut icon" href="https://tympanus.net/Development/favicon.ico"> -->
+		<link rel="stylesheet" type="text/css" href="https://tympanus.net/Development/SVGDrawingAnimation/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="https://tympanus.net/Development/SVGDrawingAnimation/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="https://tympanus.net/Development/SVGDrawingAnimation/css/component.css" />
+	</head>
+
+	<style>
+	.codrops-logo {
+	    position: relative;
+	    margin: 0 auto 30px;
+	    width: 200px;
+	    height: 200px;
+	    background: url(https://cdn4.iconfinder.com/data/icons/bank-9/100/bank-128.png) no-repeat 50% 50%;
+	}
+	#demo-link-2{
+		top: 268px;
+	}
+	.codrops-header {
+	    background: url(https://cdn.pixabay.com/photo/2017/04/05/04/48/cloud-2203997_960_720.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.codrops-demos a.current-demo {
+    	background: #403E45;
+	}	
+	.demo-loading .headline div{
+background: rgba(230,213,183,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(230,213,183,1) 0%, rgba(230,213,183,0.84) 16%, rgba(228,241,240,0) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(230,213,183,1)), color-stop(16%, rgba(230,213,183,0.84)), color-stop(100%, rgba(228,241,240,0)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(230,213,183,1) 0%, rgba(230,213,183,0.84) 16%, rgba(228,241,240,0) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(230,213,183,1) 0%, rgba(230,213,183,0.84) 16%, rgba(228,241,240,0) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(230,213,183,1) 0%, rgba(230,213,183,0.84) 16%, rgba(228,241,240,0) 100%);
+background: radial-gradient(ellipse at center, rgba(230,213,183,1) 0%, rgba(230,213,183,0.84) 16%, rgba(228,241,240,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6d5b7', endColorstr='#e4f1f0', GradientType=1 );
+
+border-top: 20px solid #9EA3A5;
+	}
+	/* Underline From Center */
+	.hvr-underline-from-center {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px transparent;
+	  position: relative;
+	  overflow: hidden;
+	}
+	.hvr-underline-from-center:before {
+	  content: "";
+	  position: absolute;
+	  z-index: -1;
+	  left: 50%;
+	  right: 50%;
+	  bottom: 0;
+	  background: #795762;
+	  height: 4px;
+	  -webkit-transition-property: left, right;
+	  transition-property: left, right;
+	  -webkit-transition-duration: 0.3s;
+	  transition-duration: 0.3s;
+	  -webkit-transition-timing-function: ease-out;
+	  transition-timing-function: ease-out;
+	}
+	.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+	  left: 0;
+	  right: 0;
+	}
+	/* Pop */
+	@-webkit-keyframes hvr-pop {
+	  50% {
+	    -webkit-transform: scale(1.2);
+	    transform: scale(1.2);
+	  }
+	}
+	@keyframes hvr-pop {
+	  50% {
+	    -webkit-transform: scale(1.2);
+	    transform: scale(1.2);
+	  }
+	}
+	.hvr-pop {
+	  display: inline-block;
+	  vertical-align: middle;
+	  -webkit-transform: perspective(1px) translateZ(0);
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px transparent;
+	}
+	.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+	  -webkit-animation-name: hvr-pop;
+	  animation-name: hvr-pop;
+	  -webkit-animation-duration: 0.3s;
+	  animation-duration: 0.3s;
+	  -webkit-animation-timing-function: linear;
+	  animation-timing-function: linear;
+	  -webkit-animation-iteration-count: 1;
+	  animation-iteration-count: 1;
+	}	
+
+
+		
+	</style>
+
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<header class="codrops-header">
+				<svg id="logo" class="line-drawing" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+					<path class="darker" d="M20,20a0,0 0 1,0 0,0a0,0 0 1,0 0,0"/>
+				</svg>
+				<div data-svg="logo" class="codrops-logo hide"></div>
+				<nav class="codrops-demos">
+<!-- 					<svg id="demo-link-1" class="line-drawing" width="84" height="40" xmlns="http://www.w3.org/2000/svg">
+						<path class="darker" d="m 7.5228307,2.6236947 67.7360843,0 c 2.782649,0 5.022831,2.23 5.022831,5 l 0,24.6482333 c 0,2.77 -2.240182,5 -5.022831,5 l -67.7360843,0 c -2.7826481,0 -5.0228307,-2.23 -5.0228307,-5 l 0,-24.6482333 c 0,-2.77 2.2401826,-5 5.0228307,-5 z" />
+					</svg>
+					<a data-svg="demo-link-1" class="hide" href="index.html">Demo 1</a> -->
+					<svg id="demo-link-2" class="line-drawing"  width="84" height="40" xmlns="http://www.w3.org/2000/svg">
+						<path d="m 7.5228307,2.6236947 67.7360843,0 c 2.782649,0 5.022831,2.23 5.022831,5 l 0,24.6482333 c 0,2.77 -2.240182,5 -5.022831,5 l -67.7360843,0 c -2.7826481,0 -5.0228307,-2.23 -5.0228307,-5 l 0,-24.6482333 c 0,-2.77 2.2401826,-5 5.0228307,-5 z" />
+					</svg>
+					<a data-svg="demo-link-2" class="current-demo hide hvr-pop" href="index2.html">Sign Up</a>
+<!-- 					<svg id="demo-link-3" class="line-drawing" width="84" height="40" xmlns="http://www.w3.org/2000/svg">
+						<path class="darker" d="m 7.5228307,2.6236947 67.7360843,0 c 2.782649,0 5.022831,2.23 5.022831,5 l 0,24.6482333 c 0,2.77 -2.240182,5 -5.022831,5 l -67.7360843,0 c -2.7826481,0 -5.0228307,-2.23 -5.0228307,-5 l 0,-24.6482333 c 0,-2.77 2.2401826,-5 5.0228307,-5 z" />
+					</svg>
+					<a data-svg="demo-link-3" class="hide" href="index3.html">Demo 3</a> -->
+				</nav>
+			</header>
+
+<!-- <svg id="dollar" class="line-drawing" preserveAspectRatio="none" viewBox="0 0 710 374">
+	<path d="M20.1,271c-2,69,31,100,104,102c78,1,113-34,109-101c-6-58-62-73-106-79c-48-17-99-25-99-95c0-48,32-79,99-78
+	c60,0,97,25,96,84" />
+</svg>
+<svg id="dollar" class="line-drawing" preserveAspectRatio="none" viewBox="0 0 710 374">
+	<path d="M15,0v470" />
+</svg> -->	
+			<div class="main">
+				<div class="headline">
+					<svg id="rectangle" class="line-drawing" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 374">
+						<path d="m -6.5883883,2.7054603 725.0078083,0 0,368.9433697 -725.0078083,0 z" />
+					</svg>
+	  				<div data-svg="rectangle" class="hide"></div>
+	  				<svg id="headline" class="line-drawing" width="560" height="120" viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+						<path class="darker" d="m20.714289,18.822632l518.571417,0c2.77002,0 5,2.22998 5,5l0,37.857178c0,2.769958 -2.22998,5 -5,5l-518.571417,0c-2.77,0 -5.000001,-2.230042 -5.000001,-5l0,-37.857178c0,-2.77002 2.23,-5 5.000001,-5z"/>
+	  					<path d="m35.269436,78.108337l492.063084,0c1.13855,0 2.055176,1.279114 2.055176,2.867981l0,16.79834c0,1.588745 -0.916626,2.86792 -2.055176,2.86792l-492.063084,0c-1.13855,0 -2.055149,-1.279175 -2.055149,-2.86792l0,-16.79834c0,-1.588867 0.916599,-2.867981 2.055149,-2.867981z"/>
+	  				</svg>
+					<h1 data-svg="headline" class="hide">
+						<span class="hvr-underline-from-center">Mission Statement</span>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>					
+					</h1>
+
+				</div>
+				<section>
+					<figure>
+						<svg id="thumb1" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb1" class="hide" src="https://cdn4.iconfinder.com/data/icons/bank-9/100/money-2-128.png" alt="img01" />
+						<figcaption>
+							<svg id="figheadline1" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline1" class="hide hvr-underline-from-center">Menu Item 1</h2>
+							<svg id="figparagraph1" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph1" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<svg id="thumb2" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb2" class="hide" src="https://cdn4.iconfinder.com/data/icons/bank-9/100/wallet-2-128.png" alt="img02" />
+						<figcaption>
+							<svg id="figheadline2" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline2" class="hide hvr-underline-from-center">Menu Item 2</h2>
+							<svg id="figparagraph2" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph2" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<svg id="thumb3" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb3" class="hide" src="https://cdn4.iconfinder.com/data/icons/bank-9/100/lock-128.png" alt="img03" />
+						<figcaption>
+							<svg id="figheadline3" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline3" class="hide hvr-underline-from-center">Menu Item 3</h2>
+							<svg id="figparagraph3" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph3" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<svg id="thumb4" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb4" class="hide" src="https://cdn4.iconfinder.com/data/icons/currency-euro-vol-2-2/32/cloud_data_storage_coin_currency_euro_money_price_finance_financial-128.png" alt="img04" />
+						<figcaption>
+							<svg id="figheadline4" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline4" class="hide hvr-underline-from-center">Menu Item 4</h2>
+							<svg id="figparagraph4" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph4" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<svg id="thumb5" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb5" class="hide" src="https://cdn4.iconfinder.com/data/icons/bank-9/100/money_bag-128.png" />
+						<figcaption>
+							<svg id="figheadline5" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline5" class="hide hvr-underline-from-center">Menu Item 5</h2>
+							<svg id="figparagraph5" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph5" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<svg id="thumb6" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+							<path d="m2.40394,2.216187l195.585959,0l0,145.917998l-195.585959,0l0,-145.917998z" />
+						</svg>
+						<img data-svg="thumb6" class="hide" src="https://cdn4.iconfinder.com/data/icons/bank-9/100/bar_chart-128.png" alt="img06" />
+						<figcaption>
+							<svg id="figheadline6" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path class="darker" d="m2.5,177.750244c0,-1.086761 0.913242,-2 2,-2l122.218567,0c1.086761,0 2,0.913239 2,2l0,15.091995c0,1.086761 -0.913239,2 -2,2l-122.218567,0c-1.086758,0 -2,-0.913239 -2,-2l0,-15.091995z" />
+							</svg>
+							<h2 data-svg="figheadline6" class="hide hvr-underline-from-center">Menu Item 6</h2>
+							<svg id="figparagraph6" class="line-drawing" width="200" height="320" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+								<path d="m2.5,225.187012c0,-0.543381 0.456621,-1 1,-1l187.85817,0c0.543381,0 1,0.456619 1,1l0,8.960159c0,0.543381 -0.456619,1 -1,1l-187.85817,0c-0.543379,0 -1,-0.456619 -1,-1l0,-8.960159z" />
+								<path d="m2.459239,244.278931c0,-0.543381 0.441853,-1 0.967658,-1l181.782347,0c0.525803,0 0.967667,0.456619 0.967667,1l0,8.960159c0,0.543381 -0.441864,1 -0.967667,1l-181.782347,0c-0.525805,0 -0.967658,-0.456619 -0.967658,-1l0,-8.960159z" />
+								<path d="m2.316734,263.017273c0,-0.543365 0.392128,-1 0.858761,-1l161.325253,0c0.466629,0 0.858749,0.456635 0.858749,1l0,8.960144c0,0.543365 -0.39212,1 -0.858749,1l-161.325253,0c-0.466632,0 -0.858761,-0.456635 -0.858761,-1l0,-8.960144z" />
+								<path d="m2.535285,282.109131c0,-0.543365 0.469602,-1 1.028428,-1l193.198479,0c0.558838,0 1.028427,0.456635 1.028427,1l0,8.960144c0,0.543365 -0.469589,1 -1.028427,1l-193.198479,0c-0.558826,0 -1.028428,-0.456635 -1.028428,-1l0,-8.960144z" />
+								<path d="m2.535285,301.554504c0,-0.543365 0.221114,-1 0.484239,-1l90.968223,0c0.263123,0 0.484238,0.456635 0.484238,1l0,8.960144c0,0.543365 -0.221115,1 -0.484238,1l-90.968223,0c-0.263125,0 -0.484239,-0.456635 -0.484239,-1l0,-8.960144z" />
+							</svg>
+							<p data-svg="figparagraph6" class="hide">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</figcaption>
+					</figure>
+				</section>
+			</div>
+
+<!-- BOTTOM HEADLINE -->
+				<div class="headline">
+					<svg id="rectangle" class="line-drawing" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 710 374">
+						<path d="m -6.5883883,2.7054603 725.0078083,0 0,368.9433697 -725.0078083,0 z" />
+					</svg>
+	  				<div data-svg="rectangle" class="show"></div>
+	  				<svg id="headline" class="line-drawing" width="560" height="120" viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
+						<path class="darker" d="m20.714289,18.822632l518.571417,0c2.77002,0 5,2.22998 5,5l0,37.857178c0,2.769958 -2.22998,5 -5,5l-518.571417,0c-2.77,0 -5.000001,-2.230042 -5.000001,-5l0,-37.857178c0,-2.77002 2.23,-5 5.000001,-5z"/>
+	  					<path d="m35.269436,78.108337l492.063084,0c1.13855,0 2.055176,1.279114 2.055176,2.867981l0,16.79834c0,1.588745 -0.916626,2.86792 -2.055176,2.86792l-492.063084,0c-1.13855,0 -2.055149,-1.279175 -2.055149,-2.86792l0,-16.79834c0,-1.588867 0.916599,-2.867981 2.055149,-2.867981z"/>
+	  				</svg>
+					<h1 data-svg="headline" class="show">
+						<span>SVG Drawing Animation</span>
+						<span>Mockup drawing animation with website fade-in</span>					
+					</h1>
+
+				</div>
+		</div><!-- /container -->
+		<script src="https://tympanus.net/Development/SVGDrawingAnimation/js/classie.js"></script>
+		<script src="https://tympanus.net/Development/SVGDrawingAnimation/js/svganimations3.js"></script>
+		<!-- For the demo ad only -->   
+<!-- <script src="https://tympanus.net/codrops/adpacks/demoad.js"></script> -->
+	</body>
+</html>
